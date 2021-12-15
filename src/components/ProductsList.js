@@ -19,10 +19,11 @@ const ProductsList = () => {
   }, []);
 
   const remove = (id) => {
-    let clone = [...products];
-    console.log("clone", clone);
-    clone.splice(id, 1);
-    setProducts(clone);
+    // let clone = [...products];
+    // console.log("clone", clone);
+    // clone.splice(id, 1);
+    // setProducts(clone);
+    setProducts((products) => products.filter((product) => product.id !== id));
   };
 
   const dataTable = () =>
